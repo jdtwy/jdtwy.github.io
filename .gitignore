@@ -9,7 +9,6 @@ lerna-debug.log*
 
 src/working
 node_modules
-dist
 dist-ssr
 # public
 src/working
