@@ -1,0 +1,22 @@
+#InfoTabButton {
+    position:absolute;
+    height: 60px;
+    width: 65px;
+    right: -65px;
+    padding:10px;
+    cursor: pointer;
+    background-color: var(--red-button-colour-up);
+  }
+  
+  #InfoTabButton:hover {
+      background-color: var(--red-button-colour-hover);
+  }
+  #InfoTabButton:active {
+      background-color: var(--red-button-colour-active);
+  }
+  
+  #InfoTabButton img {
+    display:block;
+    width:100%;
+    height:100%;
+  }
