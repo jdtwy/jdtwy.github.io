@@ -246,7 +246,7 @@ function WaypointMarker({ buildingID, targetBuildingID, setTargetBuildingID, pos
             </Text>
 
             <Image
-                url="/src/images/waypoint-marker.png"
+                url="images/waypoint-marker.png"
                 scale={0.3}
                 transparent
             />

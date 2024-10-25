@@ -4,8 +4,8 @@ import { SceneContext } from '../../../SceneContext'
 
 export default function InfoTabButton({ onClick }) {
     const { infoBoxVisible } = useContext(SceneContext)
-    const tabOpenImg = "/src/images/infoTabOpen.svg"
-    const tabCloseImg = "src/images/infoTabClose.svg"
+    const tabOpenImg = "images/infoTabOpen.svg"
+    const tabCloseImg = "images/infoTabClose.svg"
 
     const [imgSource, setImgSource] = useState()
     const [toggle, setToggle] = useState(true)
