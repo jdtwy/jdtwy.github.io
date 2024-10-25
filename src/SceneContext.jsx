@@ -31,15 +31,15 @@ export function SceneContextProvider({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                await fetch('/api/jsonfile')
+                await fetch('modelData.json')
                     .then(res => res.json())
                     .then(data => {
-                        const parseData = data.map(item => ({
-                            ...item,
-                            pos: JSON.parse(item.pos),
-                            rot: JSON.parse(item.rot)
-                        }))
-                        setSplatData(parseData);
+                        // const parseData = data.map(item => ({
+                        //     ...item,
+                        //     pos: JSON.parse(item.pos),
+                        //     rot: JSON.parse(item.rot)
+                        // }))
+                        setSplatData(data);
                     });
                 setIsLoading(false);
             } catch (error) {

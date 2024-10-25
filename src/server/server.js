@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 const port = 3001;
 
 

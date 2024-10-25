@@ -75,7 +75,7 @@ export default function Scene({ targetBuildingID, setTargetBuildingID }) {
             {splatData.map((splat) => (
                 <group key={splat.id} ref={el => splatParentRefs.current[splat.id - 1] = el}>
                     <Splat
-                        src={"http://localhost:3001/" + splat.filepath}
+                        src={splat.filepath}
                         position={splat.pos}
                         rotation={splat.rot}
                     />
