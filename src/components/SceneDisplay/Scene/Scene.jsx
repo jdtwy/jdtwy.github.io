@@ -75,7 +75,7 @@ export default function Scene({ targetBuildingID, setTargetBuildingID }) {
             {splatData.map((splat) => (
                 <group key={splat.id} ref={el => splatParentRefs.current[splat.id - 1] = el}>
                     <Splat
-                        src={splat.filepath}
+                        src={"splats/" + splat.filepath}
                         position={splat.pos}
                         rotation={splat.rot}
                     />
@@ -168,7 +168,7 @@ function WaypointMarker({ buildingID, targetBuildingID, setTargetBuildingID, pos
     const { camera, size } = useThree()
     const billboardRef = useRef()
     const textRef = useRef()
-    
+
     const desiredScreenHeight = 100
 
     // Ensures screen-space size of WaypointMarker is consistent 

@@ -4,11 +4,11 @@
         "name": "Graduate House - East",
         "code": "NR7",
         "closest_car_park": "CP8",
-        "filepath": "nr7-building.splat",
+        "filepath": "NR7.splat",
         "pos": [
+            50,
             0,
-            0,
-            5
+            0
         ],
         "rot": [
             0,
@@ -23,11 +23,11 @@
         "name": "Jenny Graves",
         "code": "JG",
         "closest_car_park": "VCP",
-        "filepath": "dih-entrance.splat",
+        "filepath": "JG.splat",
         "pos": [
-            5,
             0,
-            0
+            -0.5,
+            3
         ],
         "rot": [
             0,
@@ -42,9 +42,9 @@
         "name": "Dante's Divine Comedy",
         "code": "JG-BST",
         "closest_car_park": "VCP",
-        "filepath": "pyramid_manual-clean.splat",
+        "filepath": "JG-BST.splat",
         "pos": [
-            100,
+            0,
             0,
             0
         ],
@@ -61,11 +61,11 @@
         "name": "Bus Stops",
         "code": "BST",
         "closest_car_park": "VCP",
-        "filepath": "JG_Bus-Station.splat",
+        "filepath": "BST.splat",
         "pos": [
+            -1.85,
             0,
-            0,
-            100
+            -7.5
         ],
         "rot": [
             0,

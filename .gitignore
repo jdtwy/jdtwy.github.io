@@ -9,11 +9,13 @@ lerna-debug.log*
 
 src/working
 node_modules
+# dist
 dist-ssr
-# public
+public/splats
 src/working
 *.local
 prisma
+server
 
 # Editor directories and files
 .vscode/*
