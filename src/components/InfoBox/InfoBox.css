@@ -89,3 +89,59 @@
     flex: 1 1 auto;
     margin: 15px;
 }
+
+/* Mobile Layout Options */
+@media only screen and (max-width:550px) {
+    #InfoBox {
+        position: fixed;
+        bottom: 0;
+        height: 350px;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    #InfoBox.show {
+        transform: translateY(0px);
+    }
+
+    #InfoBox.hover {
+        transform: translateY(350px);
+    }
+
+    #InfoBox.hide {
+        transform: translateY(350px);
+    }
+
+    #InfoTextContainer {
+        height: auto;
+        width: 100%;
+        padding: 15px;
+        margin: auto;
+        overflow-y: unset;
+        flex: unset;
+        border-radius: 10px;
+        text-align: justify;
+        box-sizing: border-box;
+        background-color: #383838;
+        font-size:large;
+    }
+
+    #ContentContainer {
+        height:300px;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+
+    #BuildingInfoContainer .left {
+        text-align: left;
+        font-size:larger;
+    }
+    
+    #BuildingInfoContainer .right {
+        text-align: right;
+        font-weight: bold;
+        font-size:larger;
+    }
+}

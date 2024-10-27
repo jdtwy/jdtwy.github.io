@@ -1,7 +1,17 @@
-.scene-display {
+#scene-display {
     position: fixed;
-    height: 100vh;
-    width: 100%;
     top: 0;
     left: 0;
+    width:100%;
+    transition:height ease 0.25s;
+}
+
+.fullscreen {
+    width: 100%;
+}
+
+@media only screen and (max-width:550px) {
+    .windowed {
+        width: 100%;
+    }
 }

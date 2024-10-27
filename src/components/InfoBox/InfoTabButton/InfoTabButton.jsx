@@ -1,11 +1,11 @@
 import './InfoTabButton.css'
 import { useState, useEffect, useContext } from 'react'
-import { SceneContext } from '../../../SceneContext'
+import { UIContext } from '@/UIContext'
+import tabOpenImg from '@images/infoTabOpen.svg'
+import tabCloseImg from '@images/infoTabClose.svg'
 
 export default function InfoTabButton({ onClick }) {
-    const { infoBoxVisible } = useContext(SceneContext)
-    const tabOpenImg = "images/infoTabOpen.svg"
-    const tabCloseImg = "images/infoTabClose.svg"
+    const { infoBoxVisible } = useContext(UIContext)
 
     const [imgSource, setImgSource] = useState()
     const [toggle, setToggle] = useState(true)
@@ -30,7 +30,8 @@ export default function InfoTabButton({ onClick }) {
     }
 
     return (
-        <div className="RoundedBox" id="InfoTabButton" onClick={onClickInternal}>
+        <div className={`RoundedBox ${infoBoxVisible ? "opened":""}`}
+          id="InfoTabButton" onClick={onClickInternal}>
             <img src={imgSource}
                 alt="INFO" />
         </div>
