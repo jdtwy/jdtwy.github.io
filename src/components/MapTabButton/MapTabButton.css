@@ -34,3 +34,20 @@
     user-select: none;
     align-self: center;
 }
+
+/* Mobile Layout Options */
+@media only screen and (max-width:550px) {
+    #MapTabButton {
+        display:none;
+        height: 60px;
+        width: 100%;
+        position:fixed;
+        bottom:0px;
+        padding: 10px;
+        background-color: var(--red-button-colour-up);
+        justify-content:flex-end;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+        column-gap:20px;
+    }
+}

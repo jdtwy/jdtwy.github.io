@@ -6,7 +6,7 @@
     padding-bottom: 15px;
     align-items: start;
     justify-content: space-between;
-    row-gap:15px;
+    row-gap: 15px;
 }
 
 .RoundedBox {
@@ -38,4 +38,13 @@
 
 .FlexItem_Dynamic {
     flex: 1 1 auto;
+}
+
+/* Mobile Layout Options */
+@media only screen and (max-width:550px) {
+    #UIContainer {
+        width: 100vw;
+        height: 100vh;
+        display:fixed;
+    }
 }

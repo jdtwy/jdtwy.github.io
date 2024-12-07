@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from 'react';
 import './SwapViewButton.css'
-import { SceneContext } from '../../../SceneContext';
+import { UIContext } from '@/UIContext';
 
 export default function SwapViewButton({ onClick }) {
-    const { showListView } = useContext(SceneContext)
+    const { showListView } = useContext(UIContext)
     const labels = ["Show Building Information", "Show Building List"]
     const [label, setLabel] = useState(labels[0])
 

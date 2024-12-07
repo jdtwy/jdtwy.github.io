@@ -1,13 +1,20 @@
 import { useState, useContext } from 'react'
 import './InfoBox.css';
-import { SceneContext } from '/src/SceneContext.jsx'
+import { SceneContext } from '@/SceneContext.jsx'
+import { UIContext } from '@/UIContext.jsx'
 
 import InfoTabButton from './InfoTabButton/InfoTabButton.jsx';
-import ListView from '/src/components/ListView/ListView.jsx';
+import ListView from '@components/ListView/ListView.jsx';
 import SwapViewButton from './SwapViewButton/SwapViewButton.jsx';
 
 export default function InfoBox() {
-    const { buildingID, splatData, infoBoxVisible, setInfoBoxVisible, showListView, setShowListView } = useContext(SceneContext)
+    const { buildingID, splatData } = useContext(SceneContext)
+    const {isMobileEnv,
+        infoBoxVisible,
+        setInfoBoxVisible,
+        showListView,
+        setShowListView } = useContext(UIContext)
+
     const [hoverState, setHoverState] = useState('hide')
 
     const toggleListView = () => {
@@ -34,7 +41,7 @@ export default function InfoBox() {
             onMouseEnter={() => handleHover('hover')}
             onMouseLeave={() => handleHover('hide')}>
 
-            <InfoTabButton onClick={() => {setInfoBoxVisible(!infoBoxVisible); handleHover('hide')}} />
+            <InfoTabButton onClick={() => { setInfoBoxVisible(!infoBoxVisible); handleHover('hide') }} />
             <div className="FlexColumn" id="ContentContainer">
                 <div id="TitleContainer">
                     <h1>{showListView ? (<>Select Building:</>) : (getBuildingTitle())}</h1>

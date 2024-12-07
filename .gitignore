@@ -9,10 +9,9 @@ lerna-debug.log*
 
 src/working
 node_modules
-# dist
+dist
 dist-ssr
-# public/splats
-src/working
+public
 *.local
 prisma
 server

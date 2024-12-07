@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import ListItem from './ListItem/ListItem.jsx';
 import './ListView.css'
-import { SceneContext } from '/src/SceneContext.jsx'
+import { SceneContext } from '@/SceneContext.jsx'
 
 export default function ListContainer({ items, onChildClick }) {
     const { splatData, setBuildingID } = useContext(SceneContext)

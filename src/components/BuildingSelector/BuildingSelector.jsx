@@ -1,6 +1,6 @@
 import './BuildingSelector.css'
 import { useContext } from 'react'
-import { SceneContext } from '/src/SceneContext.jsx'
+import { SceneContext } from '@/SceneContext.jsx'
 
 export default function BuildingSelector() {
     const { splatData, setBuildingID } = useContext(SceneContext)

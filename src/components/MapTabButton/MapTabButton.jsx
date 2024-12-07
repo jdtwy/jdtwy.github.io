@@ -1,8 +1,7 @@
 import './MapTabButton.css'
-import { useState } from 'react'
+import tabOpenImg from '@images/mapTabOpen.svg'
 
 export default function MapTabButton({ onClick }) {
-    const tabOpenImg = "images/mapTabOpen.svg"
 
     const onClickInternal = () => {
         onClick()

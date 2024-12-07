@@ -2,7 +2,8 @@ import { useRef, useEffect, useState, useContext } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls, Splat, Sky, Billboard, Text, Image } from '@react-three/drei'
 import { Vector3, MOUSE } from 'three'
-import { SceneContext } from '/src/SceneContext.jsx'
+import { SceneContext } from '@/SceneContext.jsx'
+import { UIContext } from '@/UIContext.jsx'
 import gsap from 'gsap'
 
 export default function Scene({ targetBuildingID, setTargetBuildingID }) {
@@ -75,7 +76,7 @@ export default function Scene({ targetBuildingID, setTargetBuildingID }) {
             {splatData.map((splat) => (
                 <group key={splat.id} ref={el => splatParentRefs.current[splat.id - 1] = el}>
                     <Splat
-                        src={"splats/" + splat.filepath}
+                        src={"/splats/" + splat.filepath}
                         position={splat.pos}
                         rotation={splat.rot}
                     />
@@ -164,7 +165,7 @@ function CameraRig({ splats, targetBuildingID, boundingBoxes }) {
 
 function WaypointMarker({ buildingID, targetBuildingID, setTargetBuildingID, position, boundingBox, text }) {
     const [selectState, setSelectState] = useState()
-    const { infoBoxVisible, setInfoBoxVisible, setShowListView } = useContext(SceneContext)
+    const { infoBoxVisible, setInfoBoxVisible, setShowListView } = useContext(UIContext)
     const { camera, size } = useThree()
     const billboardRef = useRef()
     const textRef = useRef()
